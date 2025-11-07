@@ -9,5 +9,5 @@ function main() {
   );
 }
 
-export default App;
+export default main;
   
