@@ -1,4 +1,4 @@
-Here we have learned about react algorithm, reconciliation and virtual DOM
+# Here we have learned about react algorithm, reconciliation and virtual DOM
 
 1. The createRoot create's its own DOM and then compare it with the web browser's DOM and only update those components which are         actually updated.
 2. But the browser removes the whole DOM and then recrates the whole DOM with the updated values this is called reload.
