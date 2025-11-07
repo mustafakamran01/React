@@ -21,3 +21,5 @@ How to run viteReactApp:
 
 How to install node_modules:
     -> "npm install"
+
+=> React creates it's own DOM, commonly known as "Virtual DOM"
