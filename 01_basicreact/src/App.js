@@ -1,6 +1,6 @@
 import FirstApplication from "./Test";
 
-function App() {
+function main() {
   return (
     <>
       <h1>10 words using lorem ipsum</h1>
@@ -10,4 +10,4 @@ function App() {
 }
 
 export default App;
- 
+  
