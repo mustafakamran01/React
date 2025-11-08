@@ -1,55 +1,51 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
-
-function App() {
+function App() { 
   
-  const [counter, setCounter] = useState(8)    
+  let [counter, setCounter] = useState(10);
+  /*
+    Here,
+      useState(10) => We are giving initial value of counter i.e, 10
+      counter => It is the variable whose initial value is 10
+      setCounter => It is a function which change the value of counter
+  */
+  /* 
+    useState is used to reflect the changes in UI.
+    useState is used to store and manage data (state) inside a functional component. 
+    When the state changes, React re-renders the component, and 
+    the UI automatically updates to reflect those changes. 
+  */
 
-  const addValue = () => {
-    if(counter < 20){
-      // setCounter(counter + 1)
-      // setCounter(counter + 1)
-      // setCounter(counter + 1)
-      // setCounter(counter + 1)
-      /*
-        In this scenario, it will increase the value only by 1 not by 4, because
-        react follow fibre algo, in which these operations will bundled together and then go for compilation
-      */
-
-      setCounter((prevCounter) => prevCounter + 1)
-      setCounter((prevCounter) => prevCounter + 1)
-      setCounter((prevCounter) => prevCounter + 1)
-      setCounter((prevCounter) => prevCounter + 1)
-      /*
-        In this scenario, the value will be increased by 4, because it firstly takes the previous value and then perform the operation,
-        after that it goes to the next method
-      */
-
-    }
-    // console.log(counter, Math.random());
-    
-  }
-
-  const removeValue = () => {
-    if (counter > 0) {
-      setCounter(counter - 1)
-    }
-  }
- 
-  return (
+  // let value = 10
+  return(
     <>
-      <h1>Counter number</h1>
-      <h2>Value: {counter} </h2>
-      <button
-      onClick={addValue}
-      >Add value {counter} </button>
-      <button 
-      onClick={removeValue}
-      >Remove value {counter} </button>
-      <p>Footer: {counter} </p>
+      <h1>Counter</h1>
+
+      <h2>Value: {counter}</h2>
+
+      <button onClick={() => {
+        counter = counter + 1
+        if (counter <= 20) {
+          setCounter(counter)
+        } else {
+          counter = counter - 1
+          setCounter(counter)
+        }
+      }}>Add Value</button>
+
+      <br />
+      <br />
+
+      <button onClick={() => {
+        counter = counter - 1
+        if (counter >= 0) {
+          setCounter(counter)
+        } else {
+          counter = counter + 1
+          setCounter(counter)
+        }
+      }}>Remove Value</button>
     </>
   )
 }
