@@ -1,35 +1,39 @@
-// const { Children } = require("react");
+function customElements(element, container) {
+    /*const domElement = document.createElement(element.type)
+    domElement.innerHTML = element.Children
+    domElement.setAttribute('href', element.props.href)
+    domElement.setAttribute('target', element.props.target)
 
-function customReact(reactElement, mainContainer){
-    /* const domElement = document.createElement(reactElement.type)
-    domElement.innerHTML = reactElement.Children
-    domElement.setAttribute('href', reactElement.props.href)
-    domElement.setAttribute('target', reactElement.props.target)
+    container.appendChild(domElement)*/
 
-    mainContainer.appendChild(domElement) */
+    const domElement = document.createElement(element.type)
+    domElement.innerHTML = element.Children
 
-    const domElement = document.createElement(reactElement.type)
-    domElement.innerHTML = reactElement.Children
+    for (const prop in element.props) {
+        if (prop === 'children') continue;
 
-    for (const key in reactElement.props) {
-        if(key === 'children') continue
-
-        domElement.setAttribute(key, reactElement.props[key])
+        domElement.setAttribute(prop, element.props[prop])
     }
-
-    mainContainer.appendChild(domElement)
+    container.appendChild(domElement)
 }
 
-const reactElement = {
+const reactELement = {
     type: 'a',
     props: {
         href: 'https://google.com',
         target: '_blank'
     },
-
-    Children: 'Click me to visit google'
+    Children: "Click me to visit google"
 }
 
-const mainContainer = document.getElementById('root')
+const mainContainer = document.querySelector('#root')
 
-customReact(reactElement, mainContainer)
+customElements(reactELement, mainContainer);
+/* Here, reactElement is the element which which need to be created and render into the given container (mainContainer) */
+
+
+
+
+
+
+
