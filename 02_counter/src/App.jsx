@@ -18,34 +18,56 @@ function App() {
   */
 
   // let value = 10
+
+  const addValue = () => {
+    // counter = counter + 1
+
+    // setCounter(counter + 1)
+    // setCounter(counter + 1)
+    // setCounter(counter + 1)
+    // setCounter(counter + 1)
+    /* 
+      Here the value is increased by 1 only, despite of calling setCounter 4 times, because
+      here all the setCounter is performing the same task(increasing counter by 1), so
+      all the setCounter send to backend as a batch and only execute one time
+    */
+
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    /*
+      Here what happen is, useState accept a callback and in return it will give the previous counterValue, and
+      what will happen is, it will first increase the value then it will move to second setCounter, 
+      so in every click, the value will be increased by 4
+    */
+  }
+
+  const removeValue = () => {
+    // counter = counter - 1
+    // setCounter(counter - 1)
+    // setCounter(counter - 1)
+    // setCounter(counter - 1)
+    // setCounter(counter - 1)
+
+    setCounter(prevCounter => prevCounter - 1)
+    setCounter(prevCounter => prevCounter - 1)
+    setCounter(prevCounter => prevCounter - 1)
+    setCounter(prevCounter => prevCounter - 1)
+  }
+
   return(
     <>
       <h1>Counter</h1>
 
       <h2>Value: {counter}</h2>
 
-      <button onClick={() => {
-        counter = counter + 1
-        if (counter <= 20) {
-          setCounter(counter)
-        } else {
-          counter = counter - 1
-          setCounter(counter)
-        }
-      }}>Add Value</button>
+      <button onClick={addValue}>Add Value</button>
 
       <br />
       <br />
 
-      <button onClick={() => {
-        counter = counter - 1
-        if (counter >= 0) {
-          setCounter(counter)
-        } else {
-          counter = counter + 1
-          setCounter(counter)
-        }
-      }}>Remove Value</button>
+      <button onClick={removeValue}>Remove Value</button>
     </>
   )
 }
