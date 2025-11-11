@@ -33,6 +33,10 @@ function App() {
           <button onClick={ () => setColor("yellow")}
           className='outline-none px-5 py-2 bg-yellow-400 text-white rounded-full'
           >Yellow</button>
+
+          <button onClick={ () => setColor("gray")}
+          className='outline-none px-6 py-2 bg-gray-400 text-white rounded-full'
+          >Gray</button>
           
         </div>
 
