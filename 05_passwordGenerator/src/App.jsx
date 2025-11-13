@@ -1,4 +1,4 @@
-import { use, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   const [charAllowed, setCharAllowed] = useState(false)
   const [numberAllowed, setNumberAllowed] = useState(false)
 
-  const passwordGenerator = () => {
+  const passwordGenerator = useCallback( () => {
     let pass = ""
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
 
@@ -21,12 +21,13 @@ function App() {
     }
 
     setPassword(pass)
-  }
 
-  const lengthChange = () => {
-    setLength(length)
+  }, [length, charAllowed, numberAllowed, setPassword])
+
+  useEffect( () => {
     passwordGenerator()
-  }
+  }, [length, charAllowed, numberAllowed, setPassword])
+
 
   return (
     <div className="max-w-xl mx-auto p-6 bg-white rounded-2xl shadow-lg justify-center inset-x-0">
@@ -35,8 +36,9 @@ function App() {
         
         <input
         type="text"
-        placeholder="Type or paste text here"
         value={password}
+        placeholder='password'
+        readOnly
         className="flex-1 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-300 bg-gray-700"
         />
 
@@ -48,12 +50,13 @@ function App() {
 
       <div className="mt-4 text-gray-800">
 
-        <label className="block text-sm font-medium mb-1">Length: {length}</label>
+        <label className="block text-sm font-medium mb-1 cursor-pointer">Length: {length}</label>
         <input
         type="range"
         min={1}
         max={100}
-        onChange={lengthChange}
+        value={length}
+        onChange={(e) => setLength(e.target.value)}
         className="w-full"/>
 
       </div>
@@ -63,6 +66,7 @@ function App() {
         <label className="inline-flex items-center gap-2 text-gray-800">
         <input
         type="checkbox"
+        onChange={ () => setCharAllowed( (prev) => !prev)}
         className="w-4 h-4"/>
         <span>Character</span>
         </label>
@@ -70,6 +74,7 @@ function App() {
         <label className="inline-flex items-center gap-2 text-gray-800">
         <input
         type="checkbox"
+        onChange={ () => setNumberAllowed( (prev) => !prev)}
         className="w-4 h-4"/>
         <span>Number</span>
         </label>
