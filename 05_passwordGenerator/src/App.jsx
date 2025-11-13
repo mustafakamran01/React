@@ -3,11 +3,13 @@ import './App.css'
 
 function App() {
 
+  // Getting all the variables to whose states needs to be change in UI
   const [password, setPassword] = useState("")
   const [length, setLength] = useState(8)
   const [charAllowed, setCharAllowed] = useState(false)
   const [numberAllowed, setNumberAllowed] = useState(false)
 
+  // Generating random password
   const passwordGenerator = useCallback( () => {
     let pass = ""
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
@@ -24,14 +26,17 @@ function App() {
 
   }, [length, charAllowed, numberAllowed, setPassword])
 
+  // Copying password to clipboard
   const copyToClipboard = () => {
     passwordRef.current?.select();
     passwordRef.current?.setSelectionRange(0, 5)
     window.navigator.clipboard.writeText(password)
   }
 
+  // Storing the reference of input box
   const passwordRef = useRef(null)
 
+  // Re-render the program whenever there is any change in given dependencies
   useEffect( () => {
     passwordGenerator()
   }, [length, charAllowed, numberAllowed, setPassword])
