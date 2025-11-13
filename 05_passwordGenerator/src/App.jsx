@@ -1,8 +1,32 @@
-import { useState } from 'react'
+import { use, useState } from 'react'
 import './App.css'
 
 function App() {
 
+  const [password, setPassword] = useState("")
+  const [length, setLength] = useState(8)
+  const [charAllowed, setCharAllowed] = useState(false)
+  const [numberAllowed, setNumberAllowed] = useState(false)
+
+  const passwordGenerator = () => {
+    let pass = ""
+    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+
+    if (charAllowed) str += "~`!@#$%^&*(){}[]?><="
+    if (numberAllowed) str += "1234567890"
+
+    for (let i = 1; i <= length; i++) {
+      let randomChar = Math.floor(Math.random() * str.length)
+      pass += str.charAt(randomChar)
+    }
+
+    setPassword(pass)
+  }
+
+  const lengthChange = () => {
+    setLength(length)
+    passwordGenerator()
+  }
 
   return (
     <div className="max-w-xl mx-auto p-6 bg-white rounded-2xl shadow-lg justify-center inset-x-0">
@@ -12,7 +36,7 @@ function App() {
         <input
         type="text"
         placeholder="Type or paste text here"
-        // value="Password"
+        value={password}
         className="flex-1 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-300 bg-gray-700"
         />
 
@@ -29,6 +53,7 @@ function App() {
         type="range"
         min={1}
         max={100}
+        onChange={lengthChange}
         className="w-full"/>
 
       </div>
