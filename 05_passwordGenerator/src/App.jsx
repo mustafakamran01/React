@@ -25,7 +25,8 @@ function App() {
   }, [length, charAllowed, numberAllowed, setPassword])
 
   const copyToClipboard = () => {
-    // passwordRef.current?
+    passwordRef.current?.select();
+    passwordRef.current?.setSelectionRange(0, 5)
     window.navigator.clipboard.writeText(password)
   }
 
@@ -51,7 +52,7 @@ function App() {
         />
 
         <button
-        className="px-4 py-2 rounded-md shadow-sm border hover:brightness-95 active:scale-95 transition"
+        className="px-4 py-2 rounded-md shadow-sm border hover:brightness-95 active:scale-95 transition hover:text-red-500 hover:bg-white"
         onClick={copyToClipboard}
         title="Copy to clipboard"
         >Copy</button>
