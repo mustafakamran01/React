@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import InputBox from './components/InputBox'
 import './App.css'
+import useCurrencyInfo from './hooks/useCurrencyInfo';
 
 function App() {
 
@@ -39,6 +40,6 @@ function App() {
       </div>
     </div>
   );
-  
+
 }
 export default App
