@@ -5,21 +5,26 @@ import useCurrencyInfo from './hooks/useCurrencyInfo'
 
 function App() {
 
+  // Accumulating all the variable whose states need to be updated in UI
   const [from, setFrom] = useState("usd")
   const [to, setTo] = useState("inr")
   const [amount, setAmount] = useState()
   const [convertedAmount, setConvertedAmount] = useState()
 
+  // Extracting currencyInfo from the custom hook
   const currencyInfo = useCurrencyInfo(from)
 
+  // Extracting all the currency name that needs to be displayed in options
   const options = Object.keys(currencyInfo)
 
+  // Creating swap method to switch amounts
   const swap = () => {
     setFrom(to)
     setTo(from)
   }
 
-  const convert = () => {
+  // Creating a method to convert the currency values
+  const conversion = () => {
     setConvertedAmount(amount * currencyInfo[to])
   }
 
@@ -35,7 +40,6 @@ function App() {
                 <form
                     onSubmit={(e) => {
                       e.preventDefault();
-                      convert() ;
                     }}
                 >
                     <div className="w-full mb-1">
@@ -68,7 +72,10 @@ function App() {
                             amountDisable
                         />
                     </div>
-                    <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-500">
+                    <button 
+                    type="submit" 
+                    onClick={conversion}
+                    className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-500">
                         Convert {from.toUpperCase()} to {to.toUpperCase()}
                     </button>
                 </form>
