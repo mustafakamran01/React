@@ -124,9 +124,17 @@ function App() {
 
   }, [length, charAllowed, numberAllowed, setPassword])
 
+  const copyToClipboard = () => {
+    passwordRef.current?.select()
+    passwordRef.current?.setSelectionRange(0, 50)
+    window.navigator.clipboard.writeText(password)
+  }
+
   useEffect( () => {
     generatePassword();
   }, [length, charAllowed, numberAllowed, setPassword])
+
+  const passwordRef = useRef(null)
 
   return(
     <div className="max-w-xl mx-auto p-9 bg-white rounded-2xl shadow-lg justify-center inset-x-0">
@@ -138,12 +146,14 @@ function App() {
         placeholder='password'
         readOnly
         value={password}
+        ref={passwordRef}
         className="flex-1 px-10 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-800 bg-amber-100 text-black"
         />
 
         <button
         className="px-4 py-2 rounded-md shadow-sm border hover:brightness-95 active:scale-95 transition"
         title="Copy to Clipboard"
+        onClick={copyToClipboard}
         >Copy</button>
         
       </div>
