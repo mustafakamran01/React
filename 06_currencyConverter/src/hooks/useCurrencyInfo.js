@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 
+// Creating custom hook to fetch the given curency data 
 const useCurrencyInfo = (currency) => {
 
     const [data, setData] = useState({})
