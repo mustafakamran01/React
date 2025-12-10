@@ -1,0 +1,1 @@
+First we create a context folder in src, inside which we create a Context.js file
