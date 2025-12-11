@@ -1,7 +1,7 @@
-import React, { useLayoutEffect } from 'react'
+import React from 'react'
 import { useLoaderData } from 'react-router'
 
-function Hitesh() {
+function Shahnawaz() {
 
     const data = useLoaderData()
 
@@ -20,9 +20,9 @@ function Hitesh() {
     )
 }
 
-export default Hitesh
+export default Shahnawaz
 
-export const githubInfoLoaderHitesh = async() => {
-    const response = await fetch('https://api.github.com/users/hiteshchoudhary')
+export const githubInfoLoaderShah = async() => {
+    const response = await fetch('https://api.github.com/users/Shahnawazahm')
     return response.json()
 }

@@ -6,9 +6,17 @@ function Mustafa() {
     const data = useLoaderData()
 
     return (
-        <div className='bg-amber-900 text-white text-3xl p-4'>
-        <h2 className='mb-3'>Followers: {data["followers"]} </h2>
-        <img src={data["avatar_url"]} alt="View Image" width={300} />
+
+        <div className="w-full flex justify-center mt-1 mb-10">
+            <div className="bg-gray-700 text-white text-3xl p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <h2 className="mb-4">Followers: {data["followers"]}</h2>
+                <img 
+                    src={data["avatar_url"]} 
+                    alt="Profile"
+                    width={300}
+                    className="rounded-lg"
+                />
+            </div>
         </div>
     )
 }

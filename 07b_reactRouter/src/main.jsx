@@ -9,6 +9,9 @@ import Contact from './components/Contact/Contact.jsx'
 import User from './components/User/User.jsx'
 import Github from './components/Github/Github.jsx'
 import Mustafa, { githubInfoLoaderMust } from './components/Github/Mustafa.jsx'
+import Mobashshir, { githubInfoLoaderMobi } from './components/Github/Mobashshir.jsx'
+import Hitesh, { githubInfoLoaderHitesh } from './components/Github/Hitesh.jsx'
+import Shahnawaz, { githubInfoLoaderShah } from './components/Github/Shahnawaz.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +22,9 @@ const router = createBrowserRouter(
       <Route path='user/:userid' element = {<User />} />
       <Route path='github' element = {<Github />} >
         <Route loader={githubInfoLoaderMust} path='mustafa' element = {<Mustafa />} />
+        <Route loader={githubInfoLoaderMobi} path='mobashshir' element = {<Mobashshir />} />
+        <Route loader={githubInfoLoaderHitesh} path='hitesh' element = {<Hitesh />} />
+        <Route loader={githubInfoLoaderShah} path='shahnawaz' element = {<Shahnawaz />} />
       </Route>
     </Route>
   )
