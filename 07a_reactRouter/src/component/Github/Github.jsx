@@ -48,9 +48,9 @@ function Github() {
                     >
                         Hitesh Choudhary
                     </NavLink>
-                </li>    
-            </ul>
-
+                </li>
+                <br />    
+            </ul>          
             <Outlet />
         </div>
     )
