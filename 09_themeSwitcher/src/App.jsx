@@ -44,6 +44,8 @@ function App() {
 
 export default App
 
+/* Accumulating all components to all App.jsx */
+
 // function App() {
 
 //   return (
