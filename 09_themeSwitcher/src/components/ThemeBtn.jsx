@@ -30,3 +30,5 @@ export default function ThemeBtn() {
     );
 }
 
+/* Creating button to toggle dark and light mode */
+
