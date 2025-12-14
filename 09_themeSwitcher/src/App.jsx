@@ -43,4 +43,27 @@ function App() {
 }
 
 export default App
+
+// function App() {
+
+//   return (
+//     <div className="min-h-screen bg-white dark:bg-black flex items-center justify-center">
+//       <button
+//         onClick={() => {
+//           document.documentElement.classList.toggle("dark")
+//         }}
+//         className="px-6 py-3 bg-blue-600 text-white rounded"
+//       >
+//         Toggle Dark
+//       </button>
+
+//       <p className="ml-6 text-black dark:text-white">
+//         Dark Mode Text
+//       </p>
+//     </div>
+//   )
+// }
+
+// export default App
+
  
