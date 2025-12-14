@@ -75,3 +75,5 @@ export default function Card() {
         </div>
     );
 }
+
+/* Creating card components */
