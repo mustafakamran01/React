@@ -140,3 +140,5 @@ export default function Contact() {
         </div>
     );
 }
+
+// This component is related to contact
