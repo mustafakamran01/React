@@ -30,3 +30,5 @@ export default function About() {
         </div>
     );
 }
+
+// This is the component related to about
