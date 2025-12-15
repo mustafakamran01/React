@@ -26,3 +26,5 @@ export const githubInfoLoaderHitesh = async() => {
     const response = await fetch('https://api.github.com/users/hiteshchoudhary')
     return response.json()
 }
+
+// Creating component to fetch details of Hitesh
