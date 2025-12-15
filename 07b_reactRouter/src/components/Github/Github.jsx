@@ -63,3 +63,4 @@ function Github() {
 
 export default Github
 
+// Creating github component to accumulate all links
