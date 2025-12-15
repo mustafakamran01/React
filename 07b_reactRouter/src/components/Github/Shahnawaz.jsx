@@ -26,3 +26,5 @@ export const githubInfoLoaderShah = async() => {
     const response = await fetch('https://api.github.com/users/Shahnawazahm')
     return response.json()
 }
+
+// Creating component to fetch details of Shahnawaz
