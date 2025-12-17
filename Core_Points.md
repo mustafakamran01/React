@@ -12,14 +12,14 @@
     -> "npm run build"
         . build: "It's a dependencies used to build reactApp in production level"
 
-# How to create reactViteApp:
+## How to create reactViteApp:
     -> "npm create vite@latest"
 
-# How to run viteReactApp:
+## How to run viteReactApp:
     -> "npm run dev"
         . dev: "It's a dependencies used to run viteReactApp"
 
-# How to install node_modules:
+## How to install node_modules:
     -> "npm install"
 
 => React creates it's own DOM, commonly known as "Virtual DOM"
