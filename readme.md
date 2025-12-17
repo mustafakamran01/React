@@ -9,7 +9,7 @@ I am currently learning React and using this repo to understand core concepts by
 
 - JSX & Components
 - Props and State
-- React Hooks (`useState`, `useEffect`)
+- React Hooks (`useState`, `useEffect`, `useContext` etc)
 - Event handling
 - Conditional rendering
 - Basic routing (React Router)
@@ -27,12 +27,4 @@ I am currently learning React and using this repo to understand core concepts by
 
 ---
 
-## 📂 Project Structure
 
-```bash
-src/
-│── components/
-│── pages/
-│── assets/
-│── App.jsx
-│── main.jsx
