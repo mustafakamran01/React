@@ -9,10 +9,12 @@ I am currently learning React and using this repo to understand core concepts by
 
 - JSX & Components
 - Props and State
-- React Hooks (`useState`, `useEffect`, `useContext` etc)
+- React Hooks (`useState`, `useEffect`, `useContext`, `etc`)
 - Event handling
-- Conditional rendering
+- API Calling
 - Basic routing (React Router)
+- Contexts API
+- Conditional rendering
 - Component reusability
 
 ---
@@ -26,5 +28,11 @@ I am currently learning React and using this repo to understand core concepts by
 - npm
 
 ---
+
+## 📂 Projects (Till Now)
+
+- Random Password Generator
+- Currency Converter
+- To-Do App
 
 
