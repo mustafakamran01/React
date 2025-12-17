@@ -1,11 +1,11 @@
 ## How to create reactApp:
-    -> "npx create-react-app 01basicreact"
+    "npx create-react-app 01basicreact"
         . npx: "Node package executor"
         . create-react-app: "It's an utility"
         . 01basicreact: "It's a file name"
 
 ## How to run reactApp:
-    -> "npm run start"
+    "npm run start"
         . npm: "Node package manager"
         . start: "It's a dependencies used to run reactApp"
 
