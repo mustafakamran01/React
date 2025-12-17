@@ -9,17 +9,17 @@
         . npm: "Node package manager"
         . start: "It's a dependencies used to run reactApp"
 
-    -> "npm run build"
+    "npm run build"
         . build: "It's a dependencies used to build reactApp in production level"
 
 ## How to create reactViteApp:
-    -> "npm create vite@latest"
+    "npm create vite@latest"
 
 ## How to run viteReactApp:
-    -> "npm run dev"
+    "npm run dev"
         . dev: "It's a dependencies used to run viteReactApp"
 
 ## How to install node_modules:
-    -> "npm install"
+    "npm install"
 
-=> React creates it's own DOM, commonly known as "Virtual DOM"
+# React creates it's own DOM, commonly known as "Virtual DOM"
