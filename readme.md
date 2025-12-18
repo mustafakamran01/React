@@ -33,6 +33,7 @@ I am currently learning React and using this repo to understand core concepts by
 
 - Random Password Generator
 - Currency Converter
+- Theme Switcher
 - To-Do App
 
 
