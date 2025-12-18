@@ -1,10 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
+import { useEffect, useState } from 'react'
 import './App.css'
 import { ThemeProvider } from './contexts/ThemeContext'
 
 function App() {
+
+  const [themeMode, setThemeMode] = useState("light")
+
+  const lightMode = () => {
+    setThemeMode("light")
+  }
+
+  const darkMode = () => {
+    setThemeMode("dark")
+  }
+
+  // Actual way of changing theme in HTML
+
+  useEffect( () => {
+    document.querySelector('html').classList.remove("light", "dark")
+    document.querySelector('html').classList.add(themeMode)
+  }, [themeMode])
 
   return (
     <ThemeProvider value={{themeMode, lightMode, darkMode}}>
