@@ -30,3 +30,5 @@ export default function ThemeBtn() {
     );
 }
 
+
+// Creating themeBtn and adding functionality to it
