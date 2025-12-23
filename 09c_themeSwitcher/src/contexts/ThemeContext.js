@@ -11,3 +11,5 @@ export default function useTheme() {
     return useContext(themeContext)
 }
 
+
+// Creating context for theme
