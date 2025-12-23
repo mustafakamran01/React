@@ -29,4 +29,4 @@ export default function ThemeBtn() {
     );
 }
 
-// creating themeBtn
+// Adding functionality to themeBtn.jsx
