@@ -13,3 +13,5 @@ function Layout() {
 }
 
 export default Layout
+
+// Creating layout to render different components 
