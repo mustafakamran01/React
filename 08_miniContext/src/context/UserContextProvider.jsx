@@ -14,3 +14,5 @@ const UserContextProvider = ({children}) => {
 }
 
 export default UserContextProvider
+
+// Exporting context provider
