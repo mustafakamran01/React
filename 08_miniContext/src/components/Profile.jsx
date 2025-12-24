@@ -11,3 +11,5 @@ function Profile() {
 }
 
 export default Profile
+
+// Creating profile components
