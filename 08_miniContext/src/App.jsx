@@ -15,4 +15,6 @@ function App() {
 }
 
 export default App
+
+// Accumulating all components to App.jsx
  
