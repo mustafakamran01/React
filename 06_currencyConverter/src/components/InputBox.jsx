@@ -117,3 +117,5 @@ function InputBox({
 }
 
 export default InputBox;
+
+// Creating input box component
