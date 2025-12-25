@@ -15,3 +15,5 @@ const useCurrencyInfo = (currency) => {
 }
 
 export default useCurrencyInfo;
+
+// Creating custom hook
