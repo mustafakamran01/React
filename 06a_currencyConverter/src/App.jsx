@@ -46,7 +46,6 @@ function App() {
                     currency={from}
                     onCurrencyChange={(from) => setFrom(from)}
                     currencyOption={options}
-                    // amountDisable="false"
 
                   />
                 </div>
@@ -56,7 +55,7 @@ function App() {
                     onClick={swap}
                     className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
                   >
-                    swap
+                    SWAP
                   </button>
                 </div>
                 <div className="w-full mt-1 mb-4">
@@ -73,7 +72,7 @@ function App() {
                 <button type="submit"
                 onClick={conversion}
                 className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
-                  Convert 
+                  Convert {from.toUpperCase()} to {to.toUpperCase()}
                 </button>
               </form>
           </div>
