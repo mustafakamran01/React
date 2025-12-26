@@ -1,7 +1,33 @@
 
+import { useCallback, useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
+
+  const [password, setPassword] = useState('')
+  const [length, setLength] = useState('')
+  const [charAllowed, setCharAllowed] = useState(false)
+  const [numberAllowed, setNumberAllowed] = useState(false)
+
+  const generatePassword = useCallback ( () => {
+
+    let str = "QWERTYUIOPASDFGHJKLZXCVBNM"
+    let pass = ""
+
+    if (charAllowed) str += "!@#$%^&*()_+-="
+    if (numberAllowed) str += "1234567890"
+
+    for (let i = 0; i < length; i++) {
+      const randomChar = Math.floor(Math.random() * length)
+      pass += str.charAt(randomChar)
+    }
+    return pass
+
+  }, [length, charAllowed, numberAllowed, setPassword])
+  
+  useEffect( () => {
+    generatePassword()
+  }, [length, numberAllowed, charAllowed])
 
   return (
     <div className="max-w-xl mx-auto p-9 bg-white rounded-2xl shadow-lg justify-center inset-x-0">
