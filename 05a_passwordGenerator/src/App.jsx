@@ -1,5 +1,5 @@
 
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import './App.css'
 
 function App() {
@@ -29,8 +29,12 @@ function App() {
     generatePassword()
   }, [length, numberAllowed, charAllowed])
 
+  const passwordRef = useRef(null)
+
   const copyToClipBoard = () => {
-    
+    window.navigator.clipboard.writeText(password)
+    passwordRef.current?.select()
+    passwordRef.current?.setSelectionRange(0, 100)
   }
 
   return (
@@ -44,6 +48,7 @@ function App() {
         readOnly
         value={password}
         onChange={(e) => setPassword}
+        ref={passwordRef}
         className="flex-1 px-10 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-800 bg-amber-100 text-black"
         />
 
