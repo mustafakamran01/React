@@ -5,29 +5,33 @@ import './App.css'
 function App() {
 
   const [password, setPassword] = useState('')
-  const [length, setLength] = useState('')
+  const [length, setLength] = useState(10)
   const [charAllowed, setCharAllowed] = useState(false)
   const [numberAllowed, setNumberAllowed] = useState(false)
 
   const generatePassword = useCallback ( () => {
 
-    let str = "QWERTYUIOPASDFGHJKLZXCVBNM"
+    let str = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
     let pass = ""
 
     if (charAllowed) str += "!@#$%^&*()_+-="
     if (numberAllowed) str += "1234567890"
 
     for (let i = 0; i < length; i++) {
-      const randomChar = Math.floor(Math.random() * length)
+      const randomChar = Math.floor(Math.random() * str.length)
       pass += str.charAt(randomChar)
     }
-    return pass
+    setPassword(pass)
 
   }, [length, charAllowed, numberAllowed, setPassword])
   
   useEffect( () => {
     generatePassword()
   }, [length, numberAllowed, charAllowed])
+
+  const copyToClipBoard = () => {
+    
+  }
 
   return (
     <div className="max-w-xl mx-auto p-9 bg-white rounded-2xl shadow-lg justify-center inset-x-0">
@@ -38,12 +42,15 @@ function App() {
         type="text"
         placeholder='password'
         readOnly
+        value={password}
+        onChange={(e) => setPassword}
         className="flex-1 px-10 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-800 bg-amber-100 text-black"
         />
 
         <button
         className="px-4 py-2 rounded-md shadow-sm border hover:brightness-95 active:scale-95 transition"
         title="Copy to clipboard"
+        onClick={copyToClipBoard}
         >Copy</button>
         
       </div>
@@ -55,6 +62,8 @@ function App() {
         type="range"
         min={1}
         max={100}
+        value={length}
+        onChange={ (e) => setLength(e.target.value)}
         className="w-full"/>
 
       </div>
@@ -64,6 +73,7 @@ function App() {
         <label className="inline-flex items-center gap-2 text-stone-900">
         <input
         type="checkbox"
+        onChange={() => setCharAllowed(prev => !prev)}
         className="w-4 h-4"/>
         <span>Character</span>
         </label>
@@ -71,6 +81,7 @@ function App() {
         <label className="inline-flex items-center gap-2 text-stone-900">
         <input
         type="checkbox"
+        onChange={() => setNumberAllowed(prev => !prev)}
         className="w-4 h-4"/>
         <span>Number</span>
         </label>
