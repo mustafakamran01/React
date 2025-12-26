@@ -27,6 +27,7 @@ function App() {
 
   }, [length, charAllowed, numberAllowed, setPassword])
   
+  // Adding useEffect to call pass generate method
   useEffect( () => {
     generatePassword()
   }, [length, numberAllowed, charAllowed])
