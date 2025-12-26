@@ -4,6 +4,7 @@ import './App.css'
 
 function App() {
 
+  // Accumulating variables to display their states
   const [password, setPassword] = useState('')
   const [length, setLength] = useState(10)
   const [charAllowed, setCharAllowed] = useState(false)
