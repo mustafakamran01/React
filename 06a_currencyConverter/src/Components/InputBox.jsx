@@ -8,7 +8,6 @@ function InputBox({
     onCurrencyChange,
     currencyOption = [],
     amountDisable = false,
-    className = "",
 }) {
    
     const id = useId()
@@ -39,7 +38,7 @@ function InputBox({
 
                 >
                     {currencyOption.map( (ele) => (
-                        <option value={ele}>
+                        <option key={ele} value={ele}>
                             {ele}
                         </option>
                     ) )}
