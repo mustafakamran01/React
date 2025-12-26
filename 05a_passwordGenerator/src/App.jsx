@@ -34,6 +34,7 @@ function App() {
 
   const passwordRef = useRef(null)
 
+  // Creating method to copy text to clipboard
   const copyToClipBoard = () => {
     window.navigator.clipboard.writeText(password)
     passwordRef.current?.select()
