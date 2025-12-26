@@ -10,6 +10,7 @@ function App() {
   const [charAllowed, setCharAllowed] = useState(false)
   const [numberAllowed, setNumberAllowed] = useState(false)
 
+  // Creating method to generate random password
   const generatePassword = useCallback ( () => {
 
     let str = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm"
