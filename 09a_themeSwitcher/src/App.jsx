@@ -19,7 +19,6 @@ function App() {
   }
 
   // Actual way of changing mode in HTML
-
   useEffect( () => {
     document.querySelector('html').classList.remove("light", "dark")
     document.querySelector('html').classList.add(themeMode)
@@ -43,3 +42,5 @@ function App() {
 }
 
 export default App
+
+// Accumulating all components to App.jsx
