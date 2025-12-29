@@ -18,3 +18,5 @@ function User() {
 }
 
 export default User
+
+// Creating component for User
