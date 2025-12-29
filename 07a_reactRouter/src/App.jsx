@@ -15,3 +15,5 @@ function App() {
 }
 
 export default App
+
+// Creating layout to render different components
