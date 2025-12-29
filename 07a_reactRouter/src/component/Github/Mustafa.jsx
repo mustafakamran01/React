@@ -19,3 +19,5 @@ export const githubInfoLoaderMust = async() => {
     const response = await fetch('https://api.github.com/users/mustafakamran01')
     return response.json()
 }
+
+// Creating component for particular user(Mustafa)
