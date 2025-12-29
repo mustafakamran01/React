@@ -159,3 +159,5 @@ export default function Footer() {
         </footer>
     );
 }
+
+// Creating footer component
