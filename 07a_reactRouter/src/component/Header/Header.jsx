@@ -82,3 +82,4 @@ export default function Header() {
     );
 }
 
+// Creating header component
