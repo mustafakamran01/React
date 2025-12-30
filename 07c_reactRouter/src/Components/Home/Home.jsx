@@ -41,5 +41,5 @@ export default function Home() {
 
             <h1 className="text-center text-2xl sm:text-5xl py-10 font-medium">GERMAN CARS</h1>
         </div>
-    );
+  );
 }
