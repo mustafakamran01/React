@@ -11,6 +11,7 @@ import Github from './Components/Github/Github.jsx'
 import Mustafa, { gitInfoLoaderMust } from './Components/Github/Mustafa.jsx'
 import Shahnawaz, { githubLoaderShah } from './Components/Github/Shahnawaz.jsx'
 import Mobashshir, { githubInfoLoaderMobi } from './Components/Github/Mobashshir.jsx'
+import PasswordGenerator from './Components/PasswordGenerator/PasswordGenerator.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -35,6 +36,7 @@ const router = createBrowserRouter(
         loader={githubInfoLoaderMobi} 
         element={<Mobashshir />} />
       </Route>
+      <Route path='password' element={<PasswordGenerator />} />
     </Route>
   )
 )
