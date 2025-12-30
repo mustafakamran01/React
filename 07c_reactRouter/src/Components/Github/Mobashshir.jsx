@@ -1,8 +1,9 @@
-import { useLoaderData } from 'react-router'
+import { useLoaderData } from "react-router"
 
-function Mustafa() {
 
-    const info = useLoaderData(gitInfoLoaderMust)
+function Mobashshir() {
+
+    const info = useLoaderData(githubInfoLoaderMobi)
 
     return (
         <div className="w-full flex justify-center mt-1 mb-10">
@@ -15,13 +16,13 @@ function Mustafa() {
                     className="rounded-lg"
                 />
             </div>
-        </div>       
+        </div>
     )
 }
 
-export default Mustafa
+export default Mobashshir
 
-export const gitInfoLoaderMust = async()  => {
-    const response = await fetch('https://api.github.com/users/mustafakamran01')
+export const githubInfoLoaderMobi = async() => {
+    const response = await fetch('https://api.github.com/users/Mobashshirhasan')
     return response.json()
 }
