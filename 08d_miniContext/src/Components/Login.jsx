@@ -25,16 +25,22 @@ function Login() {
             <h2>Login</h2>
 
             <input type="text"
+            placeholder='username'
             value={username}
             onChange={onChangeUsername}
              />
 
+            <br />
+
             <input type="text"
+            placeholder='password'
             value={password}
             onChange={onChangePassword}
              />
 
-             <button onClick={handleSubmit}>Submit</button>
+            <br />
+
+            <button onClick={handleSubmit}>Submit</button>
         </div>        
     )
 }
