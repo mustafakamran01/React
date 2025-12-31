@@ -2,13 +2,13 @@ const { createContext, useContext, useState, Children } = require("react");
 
 export const userContext = createContext();
 
-const UserProvider = ({Children}) => {
+export const UserProvider = ({children}) => {
 
     const [user, setUser] = useState(null)
 
     return(
         <userContext.Provider value={{user, setUser}}>
-            {Children}
+            {children}
         </userContext.Provider>
     )
 }
