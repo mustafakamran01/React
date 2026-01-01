@@ -1,5 +1,4 @@
 
-
 export default function About() {
     return (
         <div className="py-16 bg-white">
@@ -32,3 +31,5 @@ export default function About() {
         </div>
     );
 }
+
+// Creating about component
