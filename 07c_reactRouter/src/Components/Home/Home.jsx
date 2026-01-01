@@ -43,3 +43,5 @@ export default function Home() {
         </div>
   );
 }
+
+// Creating home component
