@@ -18,26 +18,26 @@ function User() {
         return <h2>No record Found</h2>
     } else {
         return (
-        <div class="flex flex-col items-start gap-2 p-6 bg-gray-200 rounded-lg">
+            <div class="flex flex-col items-start gap-2 p-6 bg-gray-200 rounded-lg">
 
-            <h1 className='text-3xl underline mb-3 text-red-600'>PROFILE</h1>
-            <p class="text-gray-700 text-lg">
-                <span class="font-semibold">Name:</span> {info[userID][0]}
-            </p>
+                <h1 className='text-3xl underline mb-3 text-red-600'>PROFILE</h1>
+                <p class="text-gray-700 text-lg">
+                    <span class="font-semibold">Name:</span> {info[userID][0]}
+                </p>
 
-            <p class="text-gray-700 text-lg">
-                <span class="font-semibold">Age:</span> {info[userID][1]}
-            </p>
+                <p class="text-gray-700 text-lg">
+                    <span class="font-semibold">Age:</span> {info[userID][1]}
+                </p>
 
-            <p class="text-gray-700 text-lg">
-                <span class="font-semibold">Place:</span> {info[userID][2]}
-            </p>
+                <p class="text-gray-700 text-lg">
+                    <span class="font-semibold">Place:</span> {info[userID][2]}
+                </p>
 
-        </div>
-    )
+            </div>
+        )
     }
-
-    
 }
 
 export default User
+
+// Creating user component
