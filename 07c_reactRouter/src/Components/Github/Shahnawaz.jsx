@@ -26,3 +26,5 @@ export const githubLoaderShah = async() => {
     const response = await fetch('https://api.github.com/users/Shahnawazahm')
     return response.json();
 }
+
+// Creating github component for shahnawaz
