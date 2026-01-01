@@ -26,3 +26,5 @@ export const githubInfoLoaderMobi = async() => {
     const response = await fetch('https://api.github.com/users/Mobashshirhasan')
     return response.json()
 }
+
+// Creating Github component for mobi
