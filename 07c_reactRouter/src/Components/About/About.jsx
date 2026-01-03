@@ -32,4 +32,4 @@ export default function About() {
     );
 }
 
-// Creating about component
+// Creating about component  
