@@ -17,4 +17,4 @@ function App() {
 
 export default App
 
-// Creating layout to insert outlet  
+// Creating layout to insert outlet
