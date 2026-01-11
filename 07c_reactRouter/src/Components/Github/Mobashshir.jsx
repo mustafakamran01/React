@@ -27,4 +27,4 @@ export const githubInfoLoaderMobi = async() => {
     return response.json()
 }
 
-// Creating Github component for mobi
+// Creating Github component for mobi 
