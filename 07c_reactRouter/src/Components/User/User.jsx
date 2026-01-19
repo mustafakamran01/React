@@ -40,4 +40,4 @@ function User() {
 
 export default User
 
-// Creating user component
+// Creating user component 
