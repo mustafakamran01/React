@@ -96,5 +96,5 @@ function PasswordGenerator() {
 
 export default PasswordGenerator
 
-// c
+// Creating passwordGenerator component
 
