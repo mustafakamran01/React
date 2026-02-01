@@ -47,4 +47,4 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>,
 )
 
-// Creating routes and accumulating all components together  
+// Creating routes and accumulating all components together   
