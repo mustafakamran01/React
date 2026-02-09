@@ -160,6 +160,6 @@ export default function Footer() {
     );
 }
 
-// Creating footer component   
+// Creating footer component  
 
 
